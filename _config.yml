@@ -1,6 +1,7 @@
 # Site settings
 title: Eugene Melnyk
 header-img: img/home-bg.jpg
+icon: img/icon.png
 copyright_name: Eugene Melnyk
 description: "Eugene Melnyk's Blog"
 baseurl: ""
