@@ -14,7 +14,7 @@ email_username:  melnyk.yevhenii@gmail.com
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
-#google_tracking_id:
+google_tracking_id: "UA-98252899-1"
 
 # Build settings
 markdown: kramdown
