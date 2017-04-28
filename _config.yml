@@ -1,9 +1,9 @@
 # Site settings
 title: Eugene Melnyk
+description: "Notes about software development"
 header-img: img/home-bg.jpg
 icon: img/icon.png
 copyright_name: Eugene Melnyk
-description: "Eugene Melnyk's Blog"
 baseurl: ""
 url: "https://melgenek.github.io"
 twitter_username: melgenek
