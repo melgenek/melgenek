@@ -2,6 +2,7 @@
 layout: post
 title: Chatting on Twitter (2/2)
 image: ''
+disqus: true
 ---
 
 

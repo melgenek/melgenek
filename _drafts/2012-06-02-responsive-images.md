@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive images
-image: ''
+disqus: true
 ---
 
 

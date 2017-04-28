@@ -2,6 +2,7 @@
 layout: post
 title: Chatting on Twitter (1/2)
 image: '/images/screenshot.png'
+disqus: true
 ---
 
 Can we embed a chat widget on **Twitter**? Yes, with few tricks and **Pusher** we can create a widget and chat with our Twitter friends.
