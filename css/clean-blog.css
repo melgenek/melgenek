@@ -10,6 +10,12 @@ p {
 p a {
   text-decoration: underline;
 }
+li a {
+  text-decoration: underline;
+}
+article {
+  text-align: justify;
+}
 h1,
 h2,
 h3,
@@ -438,4 +444,13 @@ body {
 .highlight pre pre {
   border: none;
   margin-bottom: 0px;
+}
+.highlight pre code * {
+  white-space: nowrap;
+}
+.highlight pre {
+  overflow-x: auto;
+}
+.highlight pre code {
+  white-space: pre;
 }

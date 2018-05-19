@@ -1059,17 +1059,9 @@ jQuery(document).ready(function($) {
 
 // Copy code
 $(document).ready(function() {
-   $('.highlight').each(function() {
-      var btn = document.createElement('button');
-          btn.setAttribute('type', 'button');
-          // for Firefox
-          btn.setAttribute('onclick', 'selectElementContents(this.nextSibling);');
-          // for IE
-          btn.onclick = function() {selectElementContents(this.nextSibling)};
-          btn.setAttribute('style', 'position: absolute; top: 1px; right: 1px; border:0; font-size: 0.8em;');
-		  btn.innerHTML = '<i class="fa fa-align-left"></i> Select';
-      this.insertBefore(btn, this.firstChild);
-   });
+	$('div.highlight').dblclick(function(e) {
+		selectElementContents(e.target)
+	});
 });
 
 // http://stackoverflow.com/a/8024509/1848454
@@ -1087,4 +1079,5 @@ function selectElementContents(el) {
         textRange.moveToElementText(el);
         textRange.select();
     }
+    document.execCommand("copy");
 }
