@@ -293,7 +293,8 @@ If you want to read more about WebFlux, reactivity and NIO, here are some useful
 * Jakob Jenkov builds his own [non-blocking web server](http://tutorials.jenkov.com/java-nio/non-blocking-server.html)
 * Awesome Doug Lea's presentation about [Scalable IO in Java](http://gee.cs.oswego.edu/dl/cpjslides/nio.pdf)
 * Step by step implementation of reactor using Java NIO: [part1](http://jeewanthad.blogspot.com/2013/02/reactor-pattern-explained-part-1.html), [part2](http://jeewanthad.blogspot.com/2013/03/reacter-pattern-explained-part-2.html), [part3](http://jeewanthad.blogspot.com/2013/03/reacter-pattern-explained-part-3.html)
-* And [couple](https://www.celum.com/en/blog/technology/the-reactor-pattern-and-non-blocking-io) [more](https://www.puncsky.com/blog/2015/01/13/understanding-reactor-pattern-for-highly-scalable-i-o-bound-web-server) articles you can find useful
+* And [couple](https://www.celum.com/en/blog/technology/the-reactor-pattern-and-non-blocking-io) [more](https://www.puncsky.com/blog/2015/01/13/understanding-reactor-pattern-for-highly-scalable-i-o-bound-web-server) 
+[articles](http://rox-xmlrpc.sourceforge.net/niotut/) [you](https://www.usenix.org/legacy/events/hotos03/tech/full_papers/vonbehren/vonbehren_html/index.html) can find useful
 
  
 
