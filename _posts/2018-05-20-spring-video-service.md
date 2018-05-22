@@ -289,6 +289,7 @@ how things work internally.
 If you want to read more about WebFlux, reactivity and NIO, here are some useful links:
 * Dave Syer's [notes on reactivity](https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape)
 * Sébastien Deleuze tells about [reactive types in spring](https://spring.io/blog/2016/04/19/understanding-reactive-types)
+* [Threaded vs evented servers](http://mmcgrana.github.io/2010/07/threaded-vs-evented-servers.html)
 * Jakob Jenkov builds his own [non-blocking web server](http://tutorials.jenkov.com/java-nio/non-blocking-server.html)
 * Awesome Doug Lea's presentation about [Scalable IO in Java](http://gee.cs.oswego.edu/dl/cpjslides/nio.pdf)
 * Step by step implementation of reactor using Java NIO: [part1](http://jeewanthad.blogspot.com/2013/02/reactor-pattern-explained-part-1.html), [part2](http://jeewanthad.blogspot.com/2013/03/reacter-pattern-explained-part-2.html), [part3](http://jeewanthad.blogspot.com/2013/03/reacter-pattern-explained-part-3.html)
