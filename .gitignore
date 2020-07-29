@@ -4,3 +4,4 @@ Gemfile.lock
 .idea/
 *.eml
 *.iml
+.sass-cache/
