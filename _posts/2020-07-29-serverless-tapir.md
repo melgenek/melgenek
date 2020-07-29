@@ -2,7 +2,7 @@
 layout: post
 title: Serverless Tapir
 summary: "Tapir for scala is a great way to define http endpoints of your application. 
-But the development does not end at the point when the code is ready. 
+But the development does not end at the point of finishing the code. 
 This code still has to be packaged and deployed. I will use AWS Lambda and API Gateway to narrow the gap between
 Tapir source code and a complete runnable application." 
 ---
