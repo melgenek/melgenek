@@ -275,7 +275,7 @@ Packaging the Lambda
 
 I am not using lambda layers, so the Lambda function has to contain all of the dependencies.
 The fat jar is packaged using the `sbt-assembly` plugin. The only interesting part of this process is the merge conflict resolution.
-The reference configurations are concatenated and some files with conflict names are discarded.
+The reference configurations are concatenated, and some files with conflict names are discarded.
 
 ```scala
 assemblyMergeStrategy in assembly := {
