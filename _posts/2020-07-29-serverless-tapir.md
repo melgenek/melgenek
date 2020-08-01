@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Serverless Tapir
-summary: "Tapir for scala is a great way to define http endpoints of your application. 
+summary: "Tapir for Scala is a great way to define http endpoints of your application. 
 But the development does not end at the point of finishing the code. 
 This code still has to be packaged and deployed. I will use AWS Lambda and API Gateway to narrow the gap between
 Tapir source code and a complete runnable application." 
@@ -47,7 +47,7 @@ val booksListing: Endpoint[(BooksFromYear, Limit, AuthToken), String, List[Book]
 This is a representation of a single endpoint with a noticeable feature that it does not have any logic attached.
 The endpoint is solely a description of input parameters and outputs like response bodies.
 
-In order to make this definition runnable we have to use an interpreter. 
+In order to make this definition runnable, we have to use an interpreter. 
 Here is an example implementation in akka-http:
 
 ```scala
@@ -69,7 +69,7 @@ the definition of the kubernetes manifests and deployment scripts.
 Deploying an application takes a signification amount of effort.
 I want to have the code up and running quickly and easily, preferably with a single bash command. 
 Tapir, AWS Lambda and [AWS CDK](https://github.com/aws/aws-cdk) will help me with this venture. The complete code can be
-found in [the gihub repo](https://github.com/melgenek/serverless-tapir).
+found in [the github repo](https://github.com/melgenek/serverless-tapir).
 
 Implementing the interpreter
 -------------------
@@ -230,9 +230,9 @@ The only thing left is to map the Tapir's output to the response type that Http 
 This is what `OutputToHttpApiResponse` does in the `valueToResponse` method. The implementation requires some lines of code and 
 it can be found [here](https://github.com/melgenek/serverless-tapir/blob/master/lambda/src/main/scala/sttp/tapir/server/httpapi/OutputToHttpApiResponse.scala).
 
-We put the functionality that is describe into the `toRoute` function. 
+We put the functionality that is described in the `toRoute` function. 
 The `Route` is a partial function, so we can compose multiple routes into a single one via the `orElse` method.
-If none of the routes match the request, we use the predefined `EmptyRoute` that answers with the 404 response code.
+If none of the routes matches the request, we use the predefined `EmptyRoute` that answers with the 404 response code.
  
 ```scala
 implicit class RichHttpApiServerEndpoint[I, E, O](endpoint: ServerEndpoint[I, E, O, Nothing, Try]) {
@@ -312,7 +312,7 @@ def deploy(httpApiFunction: HttpApiFunction, title: String): Unit = {
 ```
 
 All the resources have scopes. The top-level scope is the `App`. Each app is a set of `Stacks`. Every `Stack` corresponds to a Cloudformation
-stack. For us it is enough to create a single Stack.
+stack. For us, it is enough to create a single Stack.
 
 ```scala
 val stack = new Stack(app, s"$title-stack")
@@ -376,8 +376,8 @@ private def apiRoutes(httpApiFunction: HttpApiFunction, integration: LambdaProxy
 }
 ```
 
-That's it. Now we pass our lambda class into the deployment function, run the `cdk deploy` command in terminal,
-and after a short time our code is up and running in AWS. 
+That's it. Now we pass our lambda class into the deployment function, run the `cdk deploy` command in the terminal,
+and after a short time, our code is up and running in AWS. 
 
 ```scala
 object Main extends App {
@@ -416,7 +416,7 @@ Result:
 Summary
 -------------------
 
-In this article I showed how to run the Tapir application in Lambda and automatically deploy the code with CDK.
+In this article, I showed how to run the Tapir application in Lambda and automatically deploy the code with CDK.
 I believe that the use of CDK brings a lot of benefit into scala applications because it keeps the
 infrastructure close to the code. The infrastructure has the same version as the code does. 
 This helps us to be sure that the required infrastructure is created at the deployment time. 
