@@ -133,7 +133,20 @@ two threads were occupied (green part of line) reading data from resource and wr
 It is performed inside Spring's [ResourceHttpMessageConverter](https://github.com/spring-projects/spring-framework/blob/master/spring-web/src/main/java/org/springframework/http/converter/ResourceHttpMessageConverter.java#L127) 
 for you.
 
-![VisualVM](/images/spring-video-service/full_file_mvc.png)
+<p style="text-align: center">
+    <img
+     alt="VisualVM"
+     loading="lazy"
+     srcset="
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/full_file_mvc.png&w=640 640w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/full_file_mvc.png&w=768 768w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/full_file_mvc.png&w=1024 1024w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/full_file_mvc.png&w=1366 1366w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/full_file_mvc.png&w=1600 1600w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/full_file_mvc.png&w=1920 1920w,
+     "
+     src="/images/spring-video-service/full_file_mvc.png">
+</p>
 
 For the video streaming the main shortcoming is: server will not be able to process more users 
 than number of threads it has. This means if there are 10 threads then there will be no more than 10 users.
@@ -193,9 +206,20 @@ can be either 1 MB, the one specified in the range header or the length of conte
 
 Now the server takes much less time to process requests and threads have opportunity to switch to other requests.
 
-![VisualVM](/images/spring-video-service/chunk_file_mvc.png)
-
-
+<p style="text-align: center">
+    <img
+     alt="VisualVM"
+     loading="lazy"
+     srcset="
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/chunk_file_mvc.png&w=640 640w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/chunk_file_mvc.png&w=768 768w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/chunk_file_mvc.png&w=1024 1024w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/chunk_file_mvc.png&w=1366 1366w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/chunk_file_mvc.png&w=1600 1600w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/chunk_file_mvc.png&w=1920 1920w,
+     "
+     src="/images/spring-video-service/chunk_file_mvc.png">
+</p>
 
 Spring WebFlux
 --------------
@@ -272,7 +296,10 @@ The buffer received is written to output stream.
 client-server communication.
 
 <p style="text-align: center">
-    ![Reactor](/images/spring-video-service/reactor-my-intuition.png)
+    <img
+     alt="Reactor"
+     loading="lazy"
+     src="/images/spring-video-service/reactor-my-intuition.png">
 </p>
 
 The pattern described is called Reactor. It allows to handle multiple requests at the same time
@@ -283,7 +310,20 @@ The default implementation used by _spring-boot-starter-webflux_ is Reactor Nett
 If no selector threads are configured then workers do both selection and actual work functions.
 So they read events and handle them right away.
 
-![Reactor thread](/images/spring-video-service/reactor-thread.png)
+<p style="text-align: center">
+    <img
+     alt="Reactor thread"
+     loading="lazy"
+     srcset="
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/reactor-thread.png&w=640 640w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/reactor-thread.png&w=768 768w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/reactor-thread.png&w=1024 1024w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/reactor-thread.png&w=1366 1366w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/reactor-thread.png&w=1600 1600w,
+       https://images.weserv.nl/?url=https://melgenek.github.io/images/spring-video-service/reactor-thread.png&w=1920 1920w,
+     "
+     src="/images/spring-video-service/reactor-thread.png">
+</p>
 
 There is one additional bonus which comes with WebFlux: [zero-copy data transfer](https://www.ibm.com/developerworks/library/j-zerocopy/index.html).
 Byte buffers, copied from file to connection, are not loaded into application memory.
@@ -305,23 +345,3 @@ If you want to read more about WebFlux, reactivity and NIO, here are some useful
 * Step by step implementation of reactor using Java NIO: [part1](http://jeewanthad.blogspot.com/2013/02/reactor-pattern-explained-part-1.html), [part2](http://jeewanthad.blogspot.com/2013/03/reacter-pattern-explained-part-2.html), [part3](http://jeewanthad.blogspot.com/2013/03/reacter-pattern-explained-part-3.html)
 * And a couple [more](https://tianpan.co/blog/2015-01-13-understanding-reactor-pattern-for-highly-scalable-i-o-bound-web-server) 
 [articles](http://rox-xmlrpc.sourceforge.net/niotut/) [you](https://www.usenix.org/legacy/events/hotos03/tech/full_papers/vonbehren/vonbehren_html/index.html) can find useful
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
