@@ -134,7 +134,7 @@ It is performed inside Spring's [ResourceHttpMessageConverter](https://github.co
 for you.
 
 <p style="text-align: center">
-    <img
+    <img width="100%"
      alt="VisualVM"
      loading="lazy"
      srcset="
@@ -207,7 +207,7 @@ can be either 1 MB, the one specified in the range header or the length of conte
 Now the server takes much less time to process requests and threads have opportunity to switch to other requests.
 
 <p style="text-align: center">
-    <img
+    <img width="100%"
      alt="VisualVM"
      loading="lazy"
      srcset="
@@ -296,7 +296,7 @@ The buffer received is written to output stream.
 client-server communication.
 
 <p style="text-align: center">
-    <img
+    <img width="100%"
      alt="Reactor"
      loading="lazy"
      src="/images/spring-video-service/reactor-my-intuition.png">
@@ -311,7 +311,7 @@ If no selector threads are configured then workers do both selection and actual 
 So they read events and handle them right away.
 
 <p style="text-align: center">
-    <img
+    <img width="100%"
      alt="Reactor thread"
      loading="lazy"
      srcset="
